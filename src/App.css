@@ -8,14 +8,46 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.card {
+	background: rgba(255, 255, 255, 0.168);
+	padding: 30px 100px;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.card-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.info {
+	color: #61dafb;
+	font-size: 20px;
+}
+
+.btn {
+  background-color: #61dafb;
+	padding: 20px 40px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 @keyframes App-logo-spin {

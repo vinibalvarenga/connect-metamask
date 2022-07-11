@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 //const ethers = require("ethers")
-//import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 
 
@@ -42,7 +42,41 @@ function App (){
 			setIsConnected(false);
 		}
 	};
-  return(<h1>Hello metamask</h1>)
+  return(
+	<div className="App">
+	<header className="App-header">
+		{haveMetamask ? (
+			<div className="App-header">
+				{isConnected ? (
+					<div className="card">
+						<div className="card-row">
+							<h3>Wallet Address:</h3>
+							<p>
+								{accountAddress}
+					
+							</p>
+						</div>
+						<div className="card-row">
+							
+						</div>
+					</div>
+				) : (
+					<img src={logo} className="App-logo" alt="logo" />
+				)}
+
+				{isConnected ? (
+					<p className="info"> Connected Successfully</p>
+				) : (
+					<button className="btn" onClick={connectWallet}>
+						Conecte seu metamask
+					</button>
+				)}
+			</div>
+		) : (
+			<p>Please Install MataMask</p>
+		)}
+	</header>
+</div>)
 }
 
 /*
